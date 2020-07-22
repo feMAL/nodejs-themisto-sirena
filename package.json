@@ -1,0 +1,23 @@
+{
+  "name": "themisto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js"
+  },
+  "keywords": [],
+  "author": "Fernando Malgor",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "puppeteer": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "nodemon": "^2.0.4"
+  }
+}
