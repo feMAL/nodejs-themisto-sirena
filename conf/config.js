@@ -1,12 +1,11 @@
 module.exports = {
     themisto: {
-        url: 'localhost' || process.env.URL_THEMISTO,
-        port: 5050 || process.env.PORT_THEMISTO,
+        port:  process.env.PORT || 5050,
         uri: '/api'
     },
     ganymede: {
-        url: 'localhost' || process.env.URL_GANYMEDE,
-        port: 5000 || process.env.PORT_GANYMEDE,
+        url: process.env.URL_GANYMEDE || 'localhost',
+        port: process.env.PORT_GANYMEDE || 5000 ,
         uri: '/api'
     }
     

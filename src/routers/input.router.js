@@ -9,12 +9,16 @@ const api       = express.Router();
 
 // Variables de Configuración
 // Servidor Garymede
-const SERVER = config.ganymede.url
-const PORT   = config.ganymede.port
-const URI    = config.ganymede.uri
+let SERVER = config.ganymede.url
+let PORT   = config.ganymede.port
+let URI    = config.ganymede.uri
 
 //Url de Servidor
-const URL_GANYMEDE = `http://${SERVER}:${PORT}${URI}/input/search-result`;
+let URL_GANYMEDE = `http://${SERVER}:${PORT}${URI}/input/search-result`;
+
+if(process.env.NODE_ENV == 'production'){
+    URL_GANYMEDE = `https://${SERVER}${URI}/input/search-result`;
+}
 
 /**
  * @name runWebSearcher
