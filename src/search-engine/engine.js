@@ -40,7 +40,7 @@ module.exports.run = (order_request) => {
           slowMo: 250 // slow down by 250ms
         });*/
 
-        const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
 
         const SEARCH_PARAM = order_request.query;
         const PROVIDER_PARAM = order_request.providers;
