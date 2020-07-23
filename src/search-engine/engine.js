@@ -35,12 +35,12 @@ module.exports.run = (order_request) => {
     return (async () => {
         let result = [];
 
-        const browser = await puppeteer.launch({
+        /*const browser = await puppeteer.launch({
           headless: false,
           slowMo: 250 // slow down by 250ms
-        });
+        });*/
 
-        //const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch();
 
         const SEARCH_PARAM = order_request.query;
         const PROVIDER_PARAM = order_request.providers;
